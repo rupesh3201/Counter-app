@@ -74,10 +74,19 @@ text-align: justify;
 {
   
   cursor: pointer;
-  background-color: rgb(79, 79, 222);
-  color: aliceblue;
+  background-color: rgb(103, 103, 213);
+  color: black;
+
+
 }
 .Product_Price
 {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+text-align: center;
+  margin-top: -5px;
+  color: rgb(69, 68, 69);
 
 }
