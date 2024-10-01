@@ -11,15 +11,24 @@ padding:0px;
   text-align: center;
   background-color: yellow;
 }
-
+.Card
+{
+  height: 350px;
+  width: 300px;
+  border: 1px solid grey ;
+  display: block;
+  
+}
 .Product_image
 {
   margin-top: 50px;
-  height: 300px;
+  height: 250px;
   width: 250px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   border: none;
+  border-radius: 5px;
+ 
  
 }

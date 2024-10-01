@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <div className='Holebody' > < h1 className=' Heading'>Burger King </h1>
-    <div>
+    <div className='Card'>
       <img src={Burger} className='Product_image' />
     </div>
     </div>
