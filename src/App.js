@@ -5,10 +5,10 @@ import Burger from  './burger.png'
 import './App.css'
 import imgadd from './add.png';
 import imgminius from './minus.png';
-import { useState } from 'react';
+// import react  { useState } from 'react';
 
 function App() {
-  const [Quantity , SetQuantity ] = useState(1);
+  const [Quantity , SetQuantity ] = useState(10);
 
 
 
@@ -22,9 +22,9 @@ function App() {
       <p className='Product_Price'>Price: 99 ₹</p>
       <div className='action_Btns'>
      
-      <img src={imgminius} className='Action_btn' />
-      <p className='Product_Quantity'>1</p>
-      <img src={imgadd} className='Action_btn' />
+      <img src={imgminius} className='Action_btn' alt='imgminus' onClick={()=>SetQuantity(Quantity-1)}/>
+      <p className='Product_Quantity'>{Quantity}</p>
+      <img src={imgadd} className='Action_btn' alt='imgplus' onClick={()=>SetQuantity(Quantity+1)} />
       </div>
       <button className='Buybtn'>Order Now</button>
     
