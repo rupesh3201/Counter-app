@@ -8,7 +8,18 @@ import imgminius from './minus.png';
 // import react  { useState } from 'react';
 
 function App() {
-  const [Quantity , SetQuantity ] = useState(10);
+  const [Quantity , SetQuantity ] = useState(1);
+  const  UpdateQuantity=(type)=>{
+    if(type === "minus" && Quantity >1 ) 
+    {
+      SetQuantity(Quantity-1);
+    }
+    else if (type === "plus")
+    {
+      SetQuantity(Quantity+1);
+    }
+
+  }
 
 
 
@@ -22,9 +33,9 @@ function App() {
       <p className='Product_Price'>Price: 99 ₹</p>
       <div className='action_Btns'>
      
-      <img src={imgminius} className='Action_btn' alt='imgminus' onClick={()=>SetQuantity(Quantity-1)}/>
+      <img src={imgminius} className='Action_btn' alt='imgminus' onClick={()=> UpdateQuantity("minus")}/>
       <p className='Product_Quantity'>{Quantity}</p>
-      <img src={imgadd} className='Action_btn' alt='imgplus' onClick={()=>SetQuantity(Quantity+1)} />
+      <img src={imgadd} className='Action_btn' alt='imgplus' onClick={()=> UpdateQuantity("plus")} />
       </div>
       <button className='Buybtn'>Order Now</button>
     
