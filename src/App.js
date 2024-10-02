@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // componnent created
 // importing  img
 import Burger from  './burger.png'
@@ -27,6 +27,18 @@ function App() {
    
   
   }
+  useEffect(()=> {
+    if (Quantity <10 )
+    {
+      SetBill(BurgerPrice*Quantity);
+    }
+    else if ( Quantity > 10 && Quantity < 20)
+    {
+      const Total = BurgerPrice*Quantity;
+      SetBill (Total-50);
+    }
+  },[Quantity])
+  
 
 
 
@@ -46,7 +58,7 @@ function App() {
       <p className='Product_Quantity'>{Quantity}</p>
       <img src={imgadd} className='Action_btn' alt='imgplus' onClick={()=> UpdateQuantity("plus")} />
       </div>
-      <p className='Total_Price'>Total Bill: { BurgerPrice * Quantity} ₹</p>
+      <p className='Total_Price'>Total Bill: { Total_Bill} ₹</p>
       <p className='card_error_msg'>
         {Quantity > 10 ? "Kindly Wait For 10 Min" : null}
       </p>
