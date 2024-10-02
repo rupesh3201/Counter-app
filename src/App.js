@@ -14,7 +14,7 @@ function App() {
     {
       SetQuantity(Quantity-1);
     }
-    else if (type === "plus")
+    else if (type === "plus"  )
     {
       SetQuantity(Quantity+1);
     }
@@ -37,6 +37,9 @@ function App() {
       <p className='Product_Quantity'>{Quantity}</p>
       <img src={imgadd} className='Action_btn' alt='imgplus' onClick={()=> UpdateQuantity("plus")} />
       </div>
+      <p className='card_error_msg'>
+        {Quantity > 10 ? "Kindly Wait For 10 Min" : null}
+      </p>
       <button className='Buybtn'>Order Now</button>
     
     </div>
